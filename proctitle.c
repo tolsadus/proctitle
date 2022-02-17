@@ -41,7 +41,7 @@ static void setproctitle(char *title, int tlen)
 {
 	char    buffer[MAX_TITLE_LENGTH];
 
-	if(!argv0) {
+	if (!argv0) {
 		return; /* no point running all this if we got no argv0 */
 	}
 
@@ -63,7 +63,7 @@ PHP_MINIT_FUNCTION(proctitle)
 
 	symbol = &sapi_module;
 
-	if( symbol )
+	if (symbol)
 		argv0 = symbol->executable_location;
 }
 #endif

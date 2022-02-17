@@ -26,9 +26,12 @@
 extern zend_module_entry proctitle_module_entry;
 #define phpext_proctitle_ptr &proctitle_module_entry
 
+void php_info_print_table_start(void);
+void php_info_print_table_header(int num_cols, ...);
+void php_info_print_table_end(void);
+
 PHP_MINIT_FUNCTION(proctitle);
 PHP_MINFO_FUNCTION(proctitle);
-
 PHP_FUNCTION(setproctitle);
 
 #endif	/* PHP_PROCTITLE_H */
